@@ -162,7 +162,7 @@ export const BlogSection = () => {
                   <h5 className="text-lg font-serif text-foreground mb-4">Linear Discriminant Analysis (LDA)</h5>
                   <div className="plot-container bg-secondary/30 rounded-lg flex items-center justify-center">
                     <p className="text-muted-foreground text-sm">
-                      [3D LDA Visualization - Connect Plotly.js for full functionality]
+                      [Coming Soon - Version Update in Progress]
                     </p>
                   </div>
                 </div>
@@ -171,7 +171,7 @@ export const BlogSection = () => {
                   <h5 className="text-lg font-serif text-foreground mb-4">Quadratic Discriminant Analysis (QDA)</h5>
                   <div className="plot-container bg-secondary/30 rounded-lg flex items-center justify-center">
                     <p className="text-muted-foreground text-sm">
-                      [3D QDA Visualization - Connect Plotly.js for full functionality]
+                      [Coming Soon - Version Update in Progress]
                     </p>
                   </div>
                 </div>
