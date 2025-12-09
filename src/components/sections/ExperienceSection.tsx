@@ -1,10 +1,10 @@
 import { ScrollArrow } from '../ScrollArrow';
 import { useRef, useState, useEffect } from 'react';
-import { Briefcase, GraduationCap, Code, Award } from 'lucide-react';
+import { Briefcase, GraduationCap, Code, Award, Building2} from 'lucide-react';
 
 interface TimelineItem {
   id: number;
-  type: 'work' | 'education' | 'project' | 'award';
+  type: 'work' | 'education' | 'project' | 'award' | "organization";
   title: string;
   organization: string;
   date: string;
@@ -16,10 +16,10 @@ const timelineData: TimelineItem[] = [
   {
     id: 1,
     type: 'education',
-    title: 'B.S. Data + Computer Science, B.S. Mathematics',
+    title: 'B.S. Computer Science, B.S. Mathematics',
     organization: 'University of California, San Diego',
     date: '2023 - June 2027',
-    description: 'GPA: 3.88/4.00. Courses: DSA/Advanced Algorithms, RDBMS, Distributed & Scalable Systems, Probabilistic ML, Linear Algebra, Discrete Math.',
+    description: 'GPA: 3.87/4.00. Courses include DSA/Advanced Algorithms, RDBMS, Distributed & Scalable Systems, Probabilistic ML, Linear Algebra, Discrete Math.',
     skills: ['Python', 'Java', 'C++', 'SQL', 'PyTorch', 'TensorFlow'],
   },
   {
@@ -34,14 +34,42 @@ const timelineData: TimelineItem[] = [
   {
     id: 3,
     type: 'work',
-    title: 'Computer Vision Research Intern',
+    title: 'Computer Vision Research Assistant',
     organization: 'Talmo Lab - Salk Institute',
     date: 'Feb 2025 - Present',
     description: 'Optimizing 3D pose estimation with SLEAP using PyTorch. Applied Kalman filtering, 3D CNNs, graph NNs, and PAFs for multi-animal segmentation.',
     skills: ['PyTorch', 'Docker', 'Kubernetes', 'Computer Vision'],
   },
-  {
+   {
     id: 4,
+    type: 'work',
+    title: 'Teaching Assistant',
+    organization: 'Halicioglu Data Science Institute',
+    date: 'January 2024 - Present',
+    description: 'Instructional Assistant for Theoretical Foundations, Data Sturctures, and Advanced Algorithms of Data Science. Algorithms include topological sort, \
+    Djikstras, Bellman-Ford, Prims, Kruskals, etc.',
+    skills: ['TensorFlow', 'AWS SageMaker', 'React', 'Node.js', 'MongoDB'],
+  },
+  {
+    id: 5,
+    type: 'organization',
+    title: 'Director of Projects & Fullstack Developer',
+    organization: 'Data Science Student Society',
+    date: 'May 2024 - Present',
+    description: 'Built collaborative filtering and deep learning models for Amazon. Developed Tesla semantic segmentation with UNet and OpenCV. Help maintain DS3 external and internal website in a school-hosted Virtual Machine, using Node.js.',
+    skills: ['TensorFlow', 'AWS SageMaker', 'React', 'Node.js', 'MongoDB'],
+  },
+  {
+    id: 5,
+    type: 'organization',
+    title: 'Founding Engineer',
+    organization: 'CarPro-S',
+    date: 'Mar 2024 - Jun 2024',
+    description: 'Built AI-powered driving kit with RPI, camera, and CV model to detect unsafe driving. Optimized facial landmark detection with TensorFlow.',
+    skills: ['TensorFlow', 'OpenCV', 'Flask', 'Raspberry Pi', 'Pytest'],
+  },
+    {
+    id: 6,
     type: 'work',
     title: 'Machine Learning Researcher',
     organization: 'Data Science Alliance & UCSD HDSI',
@@ -49,17 +77,8 @@ const timelineData: TimelineItem[] = [
     description: 'Trained LSTM and Transformer models with PyTorch. Built ETL pipelines on 100+ GB data using PySpark and SQL with 85%+ accuracy.',
     skills: ['PyTorch', 'PySpark', 'AWS EC2', 'MLflow', 'Jenkins'],
   },
-  {
-    id: 5,
-    type: 'work',
-    title: 'Executive Projects Director & Fullstack Developer',
-    organization: 'Data Science Student Society',
-    date: 'May 2024 - Present',
-    description: 'Built collaborative filtering and deep learning models for Amazon. Developed Tesla semantic segmentation with UNet and OpenCV.',
-    skills: ['TensorFlow', 'AWS SageMaker', 'React', 'Node.js', 'MongoDB'],
-  },
-  {
-    id: 6,
+    {
+    id: 7,
     type: 'work',
     title: 'Software Engineering Intern',
     organization: 'Lavner Inc.',
@@ -68,20 +87,20 @@ const timelineData: TimelineItem[] = [
     skills: ['Python', 'Flask', 'MySQL', 'Redis', 'AWS EC2'],
   },
   {
-    id: 7,
-    type: 'work',
-    title: 'Founding Engineer',
-    organization: 'CarPro-S',
-    date: 'Mar 2024 - Jun 2024',
-    description: 'Built AI-powered driving kit with RPI, camera, and CV model to detect unsafe driving. Optimized facial landmark detection with TensorFlow.',
-    skills: ['TensorFlow', 'OpenCV', 'Flask', 'Raspberry Pi', 'Pytest'],
+    id: 8,
+    type: 'project',
+    title: 'ML Under-the-Hood',
+    organization: 'DS3 x SUMS @ UCSD',
+    date: 'Oct 2025 - Present',
+    description: 'An interactive educational platform that visualizes scikit-learn algorithms step-by-step-bringing matrix operations, decision boundaries, and optimization processes to life.',
+    skills: ['FastAPI', 'Python', 'React', 'Render', 'TypeScript', 'Vite'],
   },
   {
     id: 8,
     type: 'project',
     title: 'Handwriting to LaTeX Conversion',
-    organization: 'Personal Project',
-    date: 'Oct 2024 - Present',
+    organization: 'Personal',
+    date: 'June 2025 - Present',
     description: 'Developing a program to convert handwriting images into LaTeX using Visual Transformer architecture with positional embeddings.',
     skills: ['Django', 'PyTorch', 'Hugging Face', 'Transformers'],
   },
@@ -89,7 +108,7 @@ const timelineData: TimelineItem[] = [
     id: 9,
     type: 'project',
     title: 'Multi-modal Audio Classification',
-    organization: 'Personal Project',
+    organization: 'Personal',
     date: 'Oct 2023 - Jan 2024',
     description: 'Built music classification with RNN-CNN joint architecture and double-layered LSTM using Mel Spectrograms, achieving 80% accuracy.',
     skills: ['PyTorch', 'Torchaudio', 'Signal Processing'],
@@ -98,7 +117,7 @@ const timelineData: TimelineItem[] = [
     id: 10,
     type: 'project',
     title: 'Facial Recognition UI',
-    organization: 'Personal Project',
+    organization: 'Personal',
     date: 'Jun 2023 - Aug 2023',
     description: 'Applied computer vision techniques for facial recognition pipeline. Built demo UI hosted on Apache with Flask and AWS SageMaker.',
     skills: ['TensorFlow', 'Flask', 'MongoDB', 'React', 'AWS'],
@@ -119,6 +138,7 @@ const getIcon = (type: string) => {
     case 'education': return GraduationCap;
     case 'project': return Code;
     case 'award': return Award;
+    case 'organization': return Building2;
     default: return Briefcase;
   }
 };
@@ -219,10 +239,10 @@ export const ExperienceSection = () => {
                       <h3 className="text-lg font-serif text-foreground mb-1">
                         {item.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground mb-3">
+                      <p className="text-m font-serif text-foreground mb-1">
                         {item.organization}
                       </p>
-                      <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                      <p className="text-m font-serif text-muted-foreground leading-relaxed mb-4">
                         {item.description}
                       </p>
                       {item.skills && (

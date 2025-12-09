@@ -17,9 +17,9 @@ export const AboutSection = () => {
             creating interactive tools that make complex concepts accessible. 
           </p>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            When I'm not coding, you'll find me exploring new technologies, 
-            studying for my next challenge, or working on side projects that push 
-            the boundaries of what's possible on the web.
+            When I'm not coding, you'll find me exploring other areas of interest including 
+            applied mathematics and TA-ing classes, or indulging in other hobbies of mine 
+            such as competitive sports and strategy games.
           </p>
         </div>
       </div>

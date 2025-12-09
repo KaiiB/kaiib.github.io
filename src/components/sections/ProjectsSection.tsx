@@ -28,7 +28,7 @@ const projects: Project[] = [
   {
     title: 'Portfolio Website',
     description: 'A minimal, dark-themed portfolio showcasing projects, experience, blog posts, contact and special effects. Currently in production.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', ''],
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Node.js'],
     github: 'https://github.com/kaiib/kaiib.github.io',
   }
 ];
