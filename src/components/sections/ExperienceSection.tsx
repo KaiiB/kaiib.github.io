@@ -104,23 +104,25 @@ const timelineData: TimelineItem[] = [
     description: 'Developing a program to convert handwriting images into LaTeX using Visual Transformer architecture with positional embeddings.',
     skills: ['Django', 'PyTorch', 'Hugging Face', 'Transformers'],
   },
+
   {
     id: 9,
+    type: 'project',
+    title: 'Keys of Parkinson\'s',
+    organization: 'Personal',
+    date: 'March 2025 - July 2025',
+    description: 'Is it possible to detect Parkinson\'s Disease through typing patterns? We developed a web application that collects typing data and does a \
+    thorough multi-stage analysis on potential indicators of Parkinson\'s.',
+    skills: ['TensorFlow', 'Flask', 'MongoDB', 'React', 'AWS'],
+  },
+    {
+    id: 10,
     type: 'project',
     title: 'Multi-modal Audio Classification',
     organization: 'Personal',
     date: 'Oct 2023 - Jan 2024',
     description: 'Built music classification with RNN-CNN joint architecture and double-layered LSTM using Mel Spectrograms, achieving 80% accuracy.',
     skills: ['PyTorch', 'Torchaudio', 'Signal Processing'],
-  },
-  {
-    id: 10,
-    type: 'project',
-    title: 'Facial Recognition UI',
-    organization: 'Personal',
-    date: 'Jun 2023 - Aug 2023',
-    description: 'Applied computer vision techniques for facial recognition pipeline. Built demo UI hosted on Apache with Flask and AWS SageMaker.',
-    skills: ['TensorFlow', 'Flask', 'MongoDB', 'React', 'AWS'],
   },
   {
     id: 11,

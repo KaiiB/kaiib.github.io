@@ -3,6 +3,7 @@ import { ExternalLink, Github } from 'lucide-react';
 import { RecentProjectBookmark } from '../RecentProjectBookmark.tsx';
 
 interface Project {
+  bookmark: boolean;
   title: string;
   description: string;
   tags: string[];
@@ -12,6 +13,7 @@ interface Project {
 
 const projects: Project[] = [
   {
+    bookmark: true,
     title: 'ML Under-the-Hood',
     description:
       'An interactive educational platform that visualizes scikit-learn algorithms step-by-step—bringing matrix operations, decision boundaries, and optimization processes to life.',
@@ -20,16 +22,19 @@ const projects: Project[] = [
     github: 'https://github.com/KaiiB/ml-under-the-hood-site',
   },
   {
+    bookmark: false,
     title: 'Handwriting to LaTeX Conversion Program',
     description: 'Developing a model to embed handwritten mathematical expressions and formal LaTeX into a shared latent space for accurate conversion.',
-    tags: ['JavaScript', 'Plotly.js', 'Machine Learning'],
+    tags: ['Linear Algebra', 'Computer Vision', 'Deep Learning', 'PyTorch'],
     github: 'https://github.com/kaiib',
   },
   {
-    title: 'Portfolio Website',
-    description: 'A minimal, dark-themed portfolio showcasing projects, experience, blog posts, contact and special effects. Currently in production.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Node.js'],
-    github: 'https://github.com/kaiib/kaiib.github.io',
+    bookmark: false,
+    title: 'Keys of Parkinson\'s',
+    description: 'Is it possible to detect Parkinson\'s Disease through typing patterns? We developed a web application that collects typing data and does a thorough multi-stage analysis on potential indicators of Parkinson\'s.',
+    tags: ['React', 'TypeScript', 'D3.js', 'MongoDB', 'Machine Learning'],
+    link: 'https://k1mittal.github.io/Keys-of-Parkinsons/',
+    github: 'https://github.com/k1mittal/Keys-of-Parkinsons.git'
   }
 ];
 
@@ -88,7 +93,8 @@ export const ProjectsSection = () => {
                     aria-label="Visit project"
                   >
                     <ExternalLink className="w-5 h-5" />
-                    <RecentProjectBookmark /> 
+                    {project.bookmark && <RecentProjectBookmark />}
+  
                   </a>
                 )}
               </div>
