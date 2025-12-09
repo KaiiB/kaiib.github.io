@@ -56,7 +56,7 @@ export const Contact = () => {
         </a>
 
         <a
-          href="https://www.linkedin.com/in/kaiibijlani/"
+          href="https://www.linkedin.com/in/kaii-bijlani/"
           target="_blank"
           rel="noopener noreferrer"
           className="
