@@ -171,7 +171,7 @@ Error generating stack: `+i.message+`
         items-center justify-between 
         gap-6 md:gap-10
         animate-fade-in-up
-      `,children:[S.jsxs("div",{className:"text-center md:text-left",children:[S.jsx("h2",{className:"text-3xl font-light tracking-[0.1em] text-foreground",children:"Let's Connect."}),S.jsx("p",{className:"text-muted-foreground text-sm mt-1",children:"And build something amazing together."})]}),S.jsxs("div",{className:"flex flex-wrap justify-center gap-6 md:gap-10",children:[S.jsxs("a",{href:"mailto:kaii@ucsd.edu",className:`
+      `,children:[S.jsxs("div",{className:"text-center md:text-left",children:[S.jsx("h2",{className:"text-3xl font-light tracking-[0.1em] text-foreground",children:"Let's Connect."}),S.jsx("p",{className:"text-muted-foreground text-sm mt-1",children:"And build something amazing together."})]}),S.jsxs("div",{className:"flex flex-wrap justify-center gap-6 md:gap-10",children:[S.jsxs("a",{href:"mailto:kbijlani@ucsd.edu",className:`
             flex items-center gap-2 
             text-muted-foreground 
             hover:text-foreground 
@@ -186,7 +186,7 @@ Error generating stack: `+i.message+`
             text-muted-foreground 
             hover:text-foreground 
             transition-colors
-          `,children:[S.jsx(ow,{className:"w-5 h-5"}),S.jsx("span",{className:"text-sm",children:"LinkedIn"})]})]}),S.jsx("a",{href:"mailto:kaii@ucsd.edu",className:`
+          `,children:[S.jsx(ow,{className:"w-5 h-5"}),S.jsx("span",{className:"text-sm",children:"LinkedIn"})]})]}),S.jsx("a",{href:"mailto:kbijlani@ucsd.edu",className:`
           bg-accent text-accent-foreground 
           px-5 py-2 rounded-md 
           font-medium
