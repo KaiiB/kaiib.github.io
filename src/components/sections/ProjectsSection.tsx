@@ -1,5 +1,6 @@
 import { ScrollArrow } from '../ScrollArrow';
 import { ExternalLink, Github } from 'lucide-react';
+import { RecentProjectBookmark } from '../RecentProjectBookmark.tsx';
 
 interface Project {
   title: string;
@@ -11,23 +12,27 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'Discriminant Analysis Visualizer',
-    description: 'Interactive 3D visualization of LDA and QDA algorithms for machine learning education.',
+    title: 'ML Under-the-Hood',
+    description:
+      'An interactive educational platform that visualizes scikit-learn algorithms step-by-step—bringing matrix operations, decision boundaries, and optimization processes to life.',
+    tags: ['React', 'TypeScript', 'Machine Learning', 'Python', 'FastAPI', 'Vite'],
+    link: 'https://ml-under-the-hood-site.vercel.app/',
+    github: 'https://github.com/KaiiB/ml-under-the-hood-site',
+  },
+  {
+    title: 'Handwriting to LaTeX Conversion Program',
+    description: 'Developing a model to embed handwritten mathematical expressions and formal LaTeX into a shared latent space for accurate conversion.',
     tags: ['JavaScript', 'Plotly.js', 'Machine Learning'],
     github: 'https://github.com/kaiib',
   },
   {
     title: 'Portfolio Website',
-    description: 'A minimal, dark-themed portfolio showcasing projects and blog posts.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS'],
-    github: 'https://github.com/kaiib/portfolio',
-  },
-  {
-    title: 'Data Visualization Projects',
-    description: 'Collection of interactive data visualizations exploring various datasets.',
-    tags: ['D3.js', 'Python', 'Data Analysis'],
-  },
+    description: 'A minimal, dark-themed portfolio showcasing projects, experience, blog posts, contact and special effects. Currently in production.',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', ''],
+    github: 'https://github.com/kaiib/kaiib.github.io',
+  }
 ];
+
 
 export const ProjectsSection = () => {
   return (
@@ -36,6 +41,9 @@ export const ProjectsSection = () => {
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-[0.2em] text-foreground mb-12 text-center">
           PROJECTS
         </h2>
+
+
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <article
@@ -80,6 +88,7 @@ export const ProjectsSection = () => {
                     aria-label="Visit project"
                   >
                     <ExternalLink className="w-5 h-5" />
+                    <RecentProjectBookmark /> 
                   </a>
                 )}
               </div>

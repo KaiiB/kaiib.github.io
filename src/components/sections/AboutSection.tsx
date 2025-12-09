@@ -9,13 +9,12 @@ export const AboutSection = () => {
         </h2>
         <div className="content-card">
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
-            Hi, I'm Kaii — a passionate developer with a love for creating elegant, 
-            functional digital experiences. I specialize in building modern web applications 
-            with clean code and thoughtful design.
+            Hi, I'm Kaii - a passionate developer with a love for creating modern applications, 
+            elegant machine learning pipelines and fully scaled systems. 
           </p>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
             My interests span across machine learning, data visualization, and 
-            creating interactive tools that make complex concepts accessible.
+            creating interactive tools that make complex concepts accessible. 
           </p>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             When I'm not coding, you'll find me exploring new technologies, 
