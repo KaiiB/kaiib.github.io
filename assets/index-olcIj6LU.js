@@ -181,7 +181,7 @@ Error generating stack: `+i.message+`
             text-muted-foreground 
             hover:text-foreground 
             transition-colors
-          `,children:[S.jsx(dm,{className:"w-5 h-5"}),S.jsx("span",{className:"text-sm",children:"GitHub"})]}),S.jsxs("a",{href:"https://www.linkedin.com/in/kaiibijlani/",target:"_blank",rel:"noopener noreferrer",className:`
+          `,children:[S.jsx(dm,{className:"w-5 h-5"}),S.jsx("span",{className:"text-sm",children:"GitHub"})]}),S.jsxs("a",{href:"https://www.linkedin.com/in/kaii-bijlani/",target:"_blank",rel:"noopener noreferrer",className:`
             flex items-center gap-2 
             text-muted-foreground 
             hover:text-foreground 
