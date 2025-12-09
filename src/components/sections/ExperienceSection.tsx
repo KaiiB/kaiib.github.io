@@ -239,10 +239,10 @@ export const ExperienceSection = () => {
                       <h3 className="text-lg font-serif text-foreground mb-1">
                         {item.title}
                       </h3>
-                      <p className="text-m font-serif text-foreground mb-1">
+                      <p className="text-m text-foreground leading-relaxed mb-4">
                         {item.organization}
                       </p>
-                      <p className="text-m font-serif text-muted-foreground leading-relaxed mb-4">
+                      <p className="text-s text-muted-foreground leading-relaxed mb-4">
                         {item.description}
                       </p>
                       {item.skills && (
