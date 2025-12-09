@@ -36,3 +36,4 @@ jobs:
           external_repository: KaiiB/kaiib.github.io
           publish_branch: gh-pages
           publish_dir: ./dist
+          clean: true
