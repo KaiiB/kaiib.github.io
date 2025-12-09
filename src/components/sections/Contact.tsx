@@ -28,7 +28,7 @@ export const Contact = () => {
       <div className="flex flex-wrap justify-center gap-6 md:gap-10">
 
         <a
-          href="mailto:kaii@ucsd.edu"
+          href="mailto:kbijlani@ucsd.edu"
           className="
             flex items-center gap-2 
             text-muted-foreground 
@@ -73,7 +73,7 @@ export const Contact = () => {
 
       {/* Right Side CTA Button */}
       <a
-        href="mailto:kaii@ucsd.edu"
+        href="mailto:kbijlani@ucsd.edu"
         className="
           bg-accent text-accent-foreground 
           px-5 py-2 rounded-md 
