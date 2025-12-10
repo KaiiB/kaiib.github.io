@@ -9,7 +9,7 @@ const SklearnBookmark = () => {
       href="https://ml-under-the-hood-site.vercel.app/"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed top-6 right-4 z-40 group"
+      className="fixed -top-5 left-0 z-40 group"
     >
       <div
         className="
@@ -20,10 +20,11 @@ const SklearnBookmark = () => {
           uppercase
           shadow-lg
           rounded-t-md
+     
           transition-transform duration-200
-          group-hover:-translate-y-0.5
+          group-hover:translate-x-20
           after:content-['']
-          after:absolute
+          after:absolute 
           after:left-1/2
           after:-translate-x-1/2
           after:-bottom-2

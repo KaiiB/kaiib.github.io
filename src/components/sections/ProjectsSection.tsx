@@ -57,8 +57,9 @@ export const ProjectsSection = () => {
 
 
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {projects.map((project, index) => (
+            
             <article
               key={project.title}
               className="content-card group hover:border-muted-foreground/30 transition-all duration-300"
@@ -101,12 +102,14 @@ export const ProjectsSection = () => {
                     aria-label="Visit project"
                   >
                     <ExternalLink className="w-5 h-5" />
-                    {project.bookmark && <RecentProjectBookmark />}
-  
                   </a>
+                  
                 )}
+                
               </div>
+              {project.bookmark && <RecentProjectBookmark />}
             </article>
+            
           ))}
         </div>
       </div>
