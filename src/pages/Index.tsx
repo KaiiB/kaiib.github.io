@@ -1,3 +1,4 @@
+import { NebulaFog } from '@/components/NebulaFog';
 import { StarfieldBackground } from '@/components/StarfieldBackground';
 import { SideNavigation } from '@/components/SideNavigation';
 import { HeroSection } from '@/components/sections/HeroSection';
@@ -7,10 +8,12 @@ import { ProjectsSection } from '@/components/sections/ProjectsSection';
 import { BlogSection } from '@/components/sections/BlogSection';
 import { Contact } from '@/components/sections/Contact';
 
+
 const Index = () => {
   return (
     <div className="relative min-h-screen">
       <StarfieldBackground />
+      <NebulaFog />
       <SideNavigation />
       
       <main className="relative z-10">

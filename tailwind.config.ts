@@ -77,13 +77,26 @@ export default {
           "0%, 100%": { opacity: "0.4" },
           "50%": { opacity: "0.8" },
         },
+        "nebula-drift": {
+          "0%": { transform: "translate3d(0px, 0px, 0px)" },
+          "50%": { transform: "translate3d(-20px, 15px, 0px)" },
+          "100%": { transform: "translate3d(0px, 0px, 0px)" },
+        },
+        "nebula-drift-slow": {
+          "0%": { transform: "translate3d(0px, 0px, 0px)" },
+          "50%": { transform: "translate3d(25px, -20px, 0px)" },
+          "100%": { transform: "translate3d(0px, 0px, 0px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in-up": "fade-in-up 0.8s ease-out forwards",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
-      },
+        "nebula-drift": "nebula-drift 25s ease-in-out infinite",
+        "nebula-drift-slow": "nebula-drift-slow 45s ease-in-out infinite"
+      }
+        
     },
   },
   plugins: [require("tailwindcss-animate")],
