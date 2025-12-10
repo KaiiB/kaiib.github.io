@@ -63,14 +63,14 @@ export const StarfieldBackground = () => {
 
       starsRef.current = starsRef.current.map(s => ({
         ...s,
-        twinkleOpacity: Math.random() ** 3
+        twinkleOpacity: Math.random() ** 4
 
       }));
 
       setStars([...starsRef.current]);
     };
 
-    twinkleIntervalRef.current = setInterval(twinkle, Math.random() ** 2 * 1000);
+    twinkleIntervalRef.current = setInterval(twinkle, Math.random() ** 2 * 700);
 
     return () => clearInterval(twinkleIntervalRef.current);
   }, [isScrolling]);
