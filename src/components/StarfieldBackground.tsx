@@ -18,7 +18,7 @@ export const StarfieldBackground = () => {
   const scrollVelocity = useRef(0);
   const animationFrameId = useRef<number>();
   const scrollTimeoutRef = useRef<NodeJS.Timeout>();
-  const twinkleIntervalRef = useRef<NodeJS.Timeout>();
+  const twinkleIntervalRef = useRef<Record<number, NodeJS.Timeout>>({});
 
   const [stars, setStars] = useState<Star[]>([]);
   const [stretch, setStretch] = useState(0);
@@ -56,24 +56,42 @@ export const StarfieldBackground = () => {
     generateStars();
   }, []);
 
-// idle twinkle
-  useEffect(() => {
-    const twinkle = () => {
-      if (isScrolling) return; // Don't twinkle while scrolling
+// ⭐ Per-star independent twinkle intervals
+useEffect(() => {
+  // clear old timers
+  Object.values(twinkleIntervalRef.current ?? {}).forEach(clearTimeout);
+  twinkleIntervalRef.current = {};
 
-      starsRef.current = starsRef.current.map(s => ({
-        ...s,
-        twinkleOpacity: Math.random() ** 4
+  starsRef.current.forEach((star) => {
+    const scheduleTwinkle = () => {
+      if (isScrolling) {
+        // While scrolling -> do not twinkle, retry later
+        twinkleIntervalRef.current![star.id] = setTimeout(scheduleTwinkle, 300);
+        return;
+      }
 
-      }));
+      // Update just this star
+      star.twinkleOpacity = Math.min(1, (Math.random() ** 3.5) * 1.3);
 
-      setStars([...starsRef.current]);
+      // Commit update for React
+      setStars((prev) => [...prev]);
+
+      // Next twinkle time for THIS star (randomized)
+      const nextDelay = 200 + Math.random() * 1000; // 0.2s – 1.2s
+      twinkleIntervalRef.current![star.id] = setTimeout(scheduleTwinkle, nextDelay);
     };
 
-    twinkleIntervalRef.current = setInterval(twinkle, Math.random() ** 2 * 700);
+    // Kick off this star's personal loop
+    const initialDelay = 200 + Math.random() * 1000;
+    twinkleIntervalRef.current![star.id] = setTimeout(scheduleTwinkle, initialDelay);
+  });
 
-    return () => clearInterval(twinkleIntervalRef.current);
-  }, [isScrolling]);
+  // Cleanup
+  return () => {
+    Object.values(twinkleIntervalRef.current ?? {}).forEach(clearTimeout);
+  };
+}, [isScrolling]);
+
 
 // scroll handler
   const handleScroll = useCallback(() => {
@@ -117,7 +135,7 @@ export const StarfieldBackground = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
       clearTimeout(scrollTimeoutRef.current);
-      clearInterval(twinkleIntervalRef.current);
+   
     };
   }, [handleScroll]);
 

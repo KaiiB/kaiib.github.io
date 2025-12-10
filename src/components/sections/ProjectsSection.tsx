@@ -35,6 +35,14 @@ const projects: Project[] = [
     tags: ['React', 'TypeScript', 'D3.js', 'MongoDB', 'Machine Learning'],
     link: 'https://k1mittal.github.io/Keys-of-Parkinsons/',
     github: 'https://github.com/k1mittal/Keys-of-Parkinsons.git'
+  },
+  {
+    bookmark: false,
+    title: 'Multimodal Audio Classification',
+    description: 'Simulated a standard music recommendation system and genre classification using 1). RNN-CNN and 2). LSTM as our model architecture of choice. \
+    Utilized Mel Spectrograms and fourier transforms to represent audio signal in a feature space, achieving 80% accuracy.',
+    tags: ['LSTM', 'CNN', 'Signal Processing', 'TensorFlow', 'Deep Learning'],
+    github: 'https://github.com/KaiiB/MusicGenreClassification.git'
   }
 ];
 
