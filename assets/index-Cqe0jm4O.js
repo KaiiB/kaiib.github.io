@@ -181,12 +181,12 @@ Error generating stack: `+i.message+`
         items-center justify-between 
         gap-6 md:gap-10
         animate-fade-in-up
-      `,children:[x.jsxs("div",{className:"text-center md:text-left",children:[x.jsx("h2",{className:"text-3xl font-light tracking-[0.1em] text-foreground",children:"Let's Connect."}),x.jsx("p",{className:"text-muted-foreground text-sm mt-1",children:"And build something amazing together."})]}),x.jsxs("div",{className:"flex flex-wrap justify-center gap-6 md:gap-10",children:[x.jsxs("a",{href:"mailto:kbijlani@ucsd.edu",className:`
+      `,children:[x.jsxs("div",{className:"text-center md:text-left",children:[x.jsx("h2",{className:"text-3xl font-light tracking-[0.1em] text-foreground",children:"Let's Connect."}),x.jsx("p",{className:"text-muted-foreground text-sm mt-1",children:"And build something amazing together."})]}),x.jsxs("div",{className:"flex flex-wrap justify-center gap-6 md:gap-10",children:[x.jsxs("a",{href:"mailto:bijlanikaii@gmail.com",className:`
             flex items-center gap-2 
             text-muted-foreground 
             hover:text-foreground 
             transition-colors
-          `,children:[x.jsx(iw,{className:"w-5 h-5"}),x.jsx("span",{className:"text-sm",children:"kbijlani@ucsd.edu"})]}),x.jsxs("a",{href:"https://github.com/KaiiB",target:"_blank",rel:"noopener noreferrer",className:`
+          `,children:[x.jsx(iw,{className:"w-5 h-5"}),x.jsx("span",{className:"text-sm",children:"bijlanikaii@gmail.com"})]}),x.jsxs("a",{href:"https://github.com/KaiiB",target:"_blank",rel:"noopener noreferrer",className:`
             flex items-center gap-2 
             text-muted-foreground 
             hover:text-foreground 
@@ -196,7 +196,7 @@ Error generating stack: `+i.message+`
             text-muted-foreground 
             hover:text-foreground 
             transition-colors
-          `,children:[x.jsx(ow,{className:"w-5 h-5"}),x.jsx("span",{className:"text-sm",children:"LinkedIn"})]})]}),x.jsx("a",{href:"mailto:kbijlani@ucsd.edu",className:`
+          `,children:[x.jsx(ow,{className:"w-5 h-5"}),x.jsx("span",{className:"text-sm",children:"LinkedIn"})]})]}),x.jsx("a",{href:"mailto:bijlanikaii@gmail.com",className:`
           bg-accent text-accent-foreground 
           px-5 py-2 rounded-md 
           font-medium
