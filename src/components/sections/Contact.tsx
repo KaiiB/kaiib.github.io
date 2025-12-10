@@ -4,9 +4,7 @@ export const Contact = () => {
   return (
     <div
       className="
-        w-full 
-        bg-card 
-        border-t border-border 
+        w-1/2 mx-auto
         py-8 px-6 
         flex flex-col md:flex-row 
         items-center justify-between 
