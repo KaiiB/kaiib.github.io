@@ -19,7 +19,7 @@ const timelineData: TimelineItem[] = [
     title: 'B.S. Computer Science, B.S. Mathematics',
     organization: 'University of California, San Diego',
     date: '2023 - June 2027',
-    description: 'GPA: 3.87/4.00. Courses include DSA/Advanced Algorithms, RDBMS, Distributed & Scalable Systems, Probabilistic ML, Linear Algebra, Discrete Math.',
+    description: 'GPA: 3.87/4.00. Courses include DSA/Advanced Algorithms, RDBMS, Distributed & Scalable Systems, Probabilistic ML, Linear Algebra, Stochastic Processes.',
     skills: ['Python', 'Java', 'C++', 'SQL', 'PyTorch', 'TensorFlow'],
   },
   {
@@ -29,7 +29,7 @@ const timelineData: TimelineItem[] = [
     organization: 'Rivian & Volkswagen Technologies',
     date: 'Jun 2025 - Sep 2025',
     description: 'Developed R1 failure agents with Databricks/Spark, parsing Kinesis streamed JSON logs. Used BERT/self-tuned embedders for high-dimensional ECU data clustering.',
-    skills: ['Databricks', 'Spark', 'BERT', 'MLFlow', 'Docker'],
+    skills: ['PySpark', 'Databricks', 'Spark', 'BERT', 'MLFlow', 'Docker'],
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const timelineData: TimelineItem[] = [
     organization: 'Talmo Lab - Salk Institute',
     date: 'Feb 2025 - Present',
     description: 'Optimizing 3D pose estimation with SLEAP using PyTorch. Applied Kalman filtering, 3D CNNs, graph NNs, and PAFs for multi-animal segmentation.',
-    skills: ['PyTorch', 'Docker', 'Kubernetes', 'Computer Vision'],
+    skills: ['PyTorch', 'Python', 'Signal Processing', 'Image Segmentation',  'Docker', 'Kubernetes', 'Computer Vision'],
   },
    {
     id: 4,
@@ -46,9 +46,9 @@ const timelineData: TimelineItem[] = [
     title: 'Teaching Assistant',
     organization: 'Halicioglu Data Science Institute',
     date: 'January 2024 - Present',
-    description: 'Instructional Assistant for Theoretical Foundations, Data Sturctures, and Advanced Algorithms of Data Science. Algorithms include topological sort, \
+    description: 'Instructional Assistant for Theoretical Foundations, Data Sturctures, and Advanced Algorithms of Data Science. Algorithms include BST select-query, topological sort, \
     Djikstras, Bellman-Ford, Prims, Kruskals, etc.',
-    skills: ['TensorFlow', 'AWS SageMaker', 'React', 'Node.js', 'MongoDB'],
+    skills: ['Python', 'Java', 'Data Structures', 'Algorithms'],
   },
   {
     id: 5,
@@ -87,50 +87,12 @@ const timelineData: TimelineItem[] = [
     skills: ['Python', 'Flask', 'MySQL', 'Redis', 'AWS EC2'],
   },
   {
-    id: 8,
-    type: 'project',
-    title: 'ML Under-the-Hood',
-    organization: 'DS3 x SUMS @ UCSD',
-    date: 'Oct 2025 - Present',
-    description: 'An interactive educational platform that visualizes scikit-learn algorithms step-by-step-bringing matrix operations, decision boundaries, and optimization processes to life.',
-    skills: ['FastAPI', 'Python', 'React', 'Render', 'TypeScript', 'Vite'],
-  },
-  {
-    id: 8,
-    type: 'project',
-    title: 'Handwriting to LaTeX Conversion',
-    organization: 'Personal',
-    date: 'June 2025 - Present',
-    description: 'Developing a program to convert handwriting images into LaTeX using Visual Transformer architecture with positional embeddings.',
-    skills: ['Django', 'PyTorch', 'Hugging Face', 'Transformers'],
-  },
-
-  {
-    id: 9,
-    type: 'project',
-    title: 'Keys of Parkinson\'s',
-    organization: 'Personal',
-    date: 'March 2025 - July 2025',
-    description: 'Is it possible to detect Parkinson\'s Disease through typing patterns? We developed a web application that collects typing data and does a \
-    thorough multi-stage analysis on potential indicators of Parkinson\'s.',
-    skills: ['TensorFlow', 'Flask', 'MongoDB', 'React', 'AWS'],
-  },
-    {
-    id: 10,
-    type: 'project',
-    title: 'Multi-modal Audio Classification',
-    organization: 'Personal',
-    date: 'Oct 2023 - Jan 2024',
-    description: 'Built music classification with RNN-CNN joint architecture and double-layered LSTM using Mel Spectrograms, achieving 80% accuracy.',
-    skills: ['PyTorch', 'Torchaudio', 'Signal Processing'],
-  },
-  {
     id: 11,
     type: 'award',
     title: 'Academic Honors & Achievements',
     organization: 'Various',
     date: '2023 - Present',
-    description: '3x AIME Qualifier, Teaching Assistant (DSA), UCSD Undergraduate Research Scholar, National Merit Scholar, Published Author.',
+    description: '3x AIME Qualifier, UCSD Undergraduate Research Scholar, National Merit Scholar, Published Author.',
   },
 ];
 
